@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Análisis de Datos · Enzo Tarazona</title>
+<meta name="description" content="Portafolio de análisis de datos e inteligencia de negocios de Enzo Manuel Tarazona Chicmana.">
+<meta property="og:title" content="Análisis de Datos · Enzo Tarazona">
+<meta property="og:description" content="Portafolio de análisis de datos e inteligencia de negocios de Enzo Manuel Tarazona Chicmana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f8fb;--card:#fff;--ink:#14213d;--muted:#56607a;--line:#e3e7ef;--accent:#1d5fd6;--accent-soft:#e8f0ff;--green:#0f8a5f;--green-soft:#e3f6ee}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--card:#151b24;--ink:#e6edf3;--muted:#9aa5b5;--line:#283140;--accent:#5b9dff;--accent-soft:#1a2738;--green:#3fbf86;--green-soft:#15291f}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:62px;gap:14px;flex-wrap:wrap}
+.brand{font-weight:800;color:var(--ink);letter-spacing:-.01em}.brand:hover{text-decoration:none}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{color:var(--muted);font-size:.93rem;font-weight:500}nav ul a.active,nav ul a:hover{color:var(--ink);text-decoration:none}
+header.hero{padding:60px 0 36px}
+.hero-grid{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center}
+.avatar{width:156px;height:156px;border-radius:50%;object-fit:cover;border:4px solid var(--card);box-shadow:0 8px 28px rgba(0,0,0,.13);background:var(--line)}
+.eyebrow{color:var(--accent);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.78rem;margin:0}
+h1{font-size:clamp(1.85rem,4vw,2.7rem);line-height:1.15;margin:.25em 0 .3em;letter-spacing:-.02em}
+h2{font-size:1.55rem;margin:0 0 .35em;letter-spacing:-.01em}h3{margin:.15em 0 .3em;font-size:1.12rem}
+.lead{color:var(--muted);font-size:1.07rem;max-width:690px;margin:0}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;padding:10px 18px;border-radius:9px;font-weight:600;font-size:.95rem;border:1px solid var(--line);color:var(--ink);background:var(--card)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}.btn:hover{text-decoration:none;filter:brightness(1.06)}
+section{padding:38px 0}.sub{color:var(--muted);margin:0 0 22px;max-width:720px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
+.grid.two{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column}
+.card p{color:var(--muted);margin:.25em 0 .9em}
+a.card{color:inherit;transition:transform .15s,box-shadow .15s,border-color .15s}
+a.card:hover{text-decoration:none;transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.09);border-color:var(--accent)}
+.icon{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;font-size:1.35rem;background:var(--accent-soft);margin-bottom:12px}
+.avatar.initials{display:grid;place-items:center;font-size:3rem;font-weight:800;color:#fff;background:var(--accent)}
+.icon.g{background:var(--green-soft)}
+.go{margin-top:auto;color:var(--accent);font-weight:700;font-size:.95rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.chip{background:var(--accent-soft);color:var(--ink);font-size:.78rem;padding:3px 10px;border-radius:999px}
+.tag{align-self:flex-start;font-size:.7rem;font-weight:700;letter-spacing:.03em;padding:2px 9px;border-radius:999px;margin-bottom:10px;background:var(--line);color:var(--muted);text-transform:uppercase}
+.tag.live{background:var(--green-soft);color:var(--green)}
+.stats{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 16px;text-align:center}
+.stat b{display:block;font-size:1.9rem;line-height:1.2;color:var(--accent)}.stat span{color:var(--muted);font-size:.88rem}
+.timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:24px}
+.job{position:relative;margin-bottom:28px}.job:last-child{margin-bottom:0}
+.job:before{content:"";position:absolute;left:-31px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--bg)}
+.job .when{color:var(--muted);font-size:.88rem}.job ul{margin:.4em 0 0;padding-left:18px;color:var(--muted)}
+ul.clean{margin:0;padding-left:18px;color:var(--muted)}ul.clean li{margin-bottom:4px}
+.skills{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.skills .card h3{font-size:1rem}
+.note{background:var(--accent-soft);border-radius:12px;padding:14px 18px;color:var(--ink);font-size:.93rem}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem;text-align:center;margin-top:20px}
+footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;margin:0 0 6px}footer p{margin:0}
+@media (max-width:640px){header.hero{padding:40px 0 24px}.hero-grid{grid-template-columns:1fr;text-align:center;gap:20px}.avatar{margin:0 auto;width:128px;height:128px}.lead{margin:0 auto}.btns{justify-content:center}nav .wrap{justify-content:center;padding:10px 16px}nav ul{gap:14px;justify-content:center}.stats{grid-template-columns:1fr 1fr}.stat b{font-size:1.5rem}.grid.two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><a class="brand" href="https://enzotarazona.github.io/">Enzo Tarazona</a><ul><li><a href="https://enzotarazona.github.io/">Inicio</a></li><li><a href="https://enzotarazona.github.io/direccion-proyectos/">Dirección de Proyectos</a></li><li><a href="https://enzotarazona.github.io/analisis-datos/" class="active">Análisis de Datos</a></li><li><a href="https://enzotarazona.github.io/#contacto">Contacto</a></li></ul></div></nav>
+
+<header class="hero"><div class="wrap">
+<p class="eyebrow">Portafolio · Datos e Inteligencia de Negocios</p>
+<h1>Análisis de Datos e Inteligencia de Negocios</h1>
+<p class="lead">Diseño Datamarts, construyo procesos ETL y desarrollo tableros que convierten datos operativos de logística, aduanas y finanzas en indicadores para decidir.</p>
+</div></header>
+
+<section><div class="wrap">
+<div class="stats">
+<div class="stat"><b>14+</b><span>tableros y KPI publicados</span></div>
+<div class="stat"><b>6</b><span>procesos ETL creados o mejorados</span></div>
+<div class="stat"><b>3</b><span>fuentes unificadas en un Datamart</span></div>
+<div class="stat"><b>2</b><span>Datamarts diseñados</span></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Proyectos</h2>
+<p class="sub">Proyectos con datos públicos. Cada uno tiene su repositorio con el código, el README y las conclusiones.</p>
+<div class="grid"><div class="card"><span class="tag">En preparación</span><div class="icon g">🗄️</div><h3>Datamart de Comercio Exterior del Perú</h3><p>Modelo estrella con datos públicos de importaciones y exportaciones, cargado con un proceso ETL documentado.</p><div class="chips"><span class="chip">SQL Server</span><span class="chip">SSIS</span><span class="chip">Modelo estrella</span></div></div><div class="card"><span class="tag">En preparación</span><div class="icon g">📊</div><h3>Dashboard de KPI de exportaciones</h3><p>Tablero interactivo con tendencias por producto, país de destino y aduana, con medidas en DAX.</p><div class="chips"><span class="chip">Power BI</span><span class="chip">DAX</span><span class="chip">Power Query</span></div></div><div class="card"><span class="tag">En preparación</span><div class="icon g">🐍</div><h3>Análisis exploratorio con Python</h3><p>Limpieza, análisis y visualización de un dataset público con conclusiones de negocio.</p><div class="chips"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">matplotlib</span></div></div><div class="card"><span class="tag">En preparación</span><div class="icon g">🔄</div><h3>Pipeline ETL de datos logísticos</h3><p>De archivos crudos a un modelo listo para reportes: validaciones, transformaciones y carga incremental.</p><div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">ETL</span></div></div></div>
+</div></section>
+
+<section><div class="wrap">
+<h2>Herramientas</h2>
+<div class="skills">
+<div class="card"><h3>Bases de datos</h3><ul class="clean"><li>SQL Server, MySQL</li><li>Datamarts y Data Warehouse</li></ul></div>
+<div class="card"><h3>Integración</h3><ul class="clean"><li>SSIS (ETL)</li><li>Power Query</li></ul></div>
+<div class="card"><h3>Visualización</h3><ul class="clean"><li>Power BI (DAX)</li><li>Tableau, Reporting Services</li></ul></div>
+<div class="card"><h3>Programación</h3><ul class="clean"><li>Python, pandas</li><li>SQL avanzado</li></ul></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="btns"><a class="btn primary" href="https://enzotarazona.github.io/direccion-proyectos/">Ver Dirección de Proyectos →</a><a class="btn" href="https://enzotarazona.github.io/">Volver al inicio</a></div>
+</div></section>
+
+<footer><div class="wrap">
+<p class="links"><a href="https://www.linkedin.com/in/enzo-manuel-tarazona-chicmana">LinkedIn</a><a href="https://github.com/enzotarazona">GitHub</a><a href="mailto:manuel.tarazona.ch@gmail.com">manuel.tarazona.ch@gmail.com</a></p>
+<p>© 2026 Enzo Manuel Tarazona Chicmana</p>
+</div></footer>
+</body>
+</html>
